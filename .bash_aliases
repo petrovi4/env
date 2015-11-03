@@ -37,11 +37,12 @@ function gfFunc {
 	if [ -z $1 ]; then
 		comLine="/usr/local/bin/git commit -m 'Fast fix'"
 	else 
-		comLine="/usr/local/bin/git commit -m $@"
+		comLine="/usr/local/bin/git commit -m '$@'"
 	fi
 	eval $comLine
 	gp
 }
+
 alias gff=gfFunc
 
 alias tw='tail -f -n 50 /var/log/mainpeople_app-work.log'
