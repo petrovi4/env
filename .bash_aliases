@@ -29,12 +29,14 @@ alias gd='git diff'
 #alias gr='git checkout dev && git pull && git checkout master && git pull && git merge dev && git push && git checkout dev'
 
 function gfFunc {
-	gA
+#	gA
 	if [ -z $1 ]
-		then echo gc "Fast fix"
-		else echo gc $1
+		then echo "Fast fix
+		else echo $1"
+#		then echo gc "Fast fix"
+#		else echo gc $1
 	fi
-	gp
+#	gp
 }
 alias gf=gfFunc
 
