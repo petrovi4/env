@@ -38,7 +38,7 @@ function gfFunc {
 	fi
 	gp
 }
-alias gf=gfFunc
+#alias gf=gfFunc
 
 alias tw='tail -f -n 50 /var/log/mainpeople_app-work.log'
 alias te='tail -f -n 50 /var/log/mainpeople_app-error.log'
