@@ -34,7 +34,7 @@ function gfFunc {
 		then 
 			git commit "Fast fix"
 		else 
-			echo git commit \"$@\"
+			git commit \"$@\"
 	fi
 	gp
 }
