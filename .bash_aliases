@@ -46,3 +46,4 @@ alias hlog='heroku logs --tail'
 alias hi='heroku apps:info'
 alias hpi='heroku pg:info'
 alias hl='heroku local'
+
