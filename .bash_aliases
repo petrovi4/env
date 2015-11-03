@@ -28,10 +28,6 @@ alias gd='git diff'
 
 #alias gr='git checkout dev && git pull && git checkout master && git pull && git merge dev && git push && git checkout dev'
 
-function aaa {
-	"/usr/local/bin/git" status jjj
-}
-
 function gfFunc {
 	gA
 	if [ -z $1 ]; then
@@ -42,8 +38,7 @@ function gfFunc {
 	eval $comLine
 	gp
 }
-
-alias gff=gfFunc
+alias gf=gfFunc
 
 alias tw='tail -f -n 50 /var/log/mainpeople_app-work.log'
 alias te='tail -f -n 50 /var/log/mainpeople_app-error.log'
