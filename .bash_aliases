@@ -28,14 +28,18 @@ alias gd='git diff'
 
 #alias gr='git checkout dev && git pull && git checkout master && git pull && git merge dev && git push && git checkout dev'
 
+function aaa {
+	"/usr/local/bin/git" status jjj
+}
+
 function gfFunc {
 	gA
-	if [ -z $1 ]
-		then 
-			git commit "Fast fix"
-		else 
-			git commit \"$@\"
+	if [ -z $1 ]; then
+		comLine="/usr/local/bin/git commit -m 'Fast fix'"
+	else 
+		comLine="/usr/local/bin/git commit -m $@"
 	fi
+	eval $comLine
 	gp
 }
 alias gff=gfFunc
