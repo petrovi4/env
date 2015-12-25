@@ -1,27 +1,40 @@
 #!/bin/bash
 
+alias sshTunnelIF='ssh root@139.162.155.105 -L 5433:localhost:5432'
 
-
+alias pgStart='pg_ctl start -D ~/Projects/PostgreSQL/'
+alias pgStop='pg_ctl stop -m fast -D ~/Projects/PostgreSQL/'
 
 alias gl='git log'
+alias пд=gl
 
 alias gs='git status'
+alias пы=gs
 
 alias gA='git add -A'
+alias пФ=gA
 
 alias ga='git add '
+alias пф=ga
 
 alias gc='git commit -m'
+alias пс=gc
 
 alias gp='git push'
+alias пз=gp
 
 alias gpl='git pull'
+alias пзд=gpl
 
 alias gb='git branch'
+alias пи=gb
 
 alias gbl='git branch -l'
+alias пид=gbl
 
 alias gch='git checkout'
+alias пср=gch
+
 alias gchm='git checkout master'
 alias gchd='git checkout dev'
 
@@ -42,11 +55,14 @@ function gfFunc {
 	gp
 }
 alias gf=gfFunc
+alias па=gf
 
 alias tw='tail -f -n 50 /var/log/mainpeople_app-work.log'
 alias te='tail -f -n 50 /var/log/mainpeople_app-error.log'
 
-alias hp='git push heroku master'
+alias hpm='git push heroku master:master'
+alias hpd='git push heroku dev:master'
+
 alias hlog='heroku logs --tail'
 alias hi='heroku apps:info'
 alias hpi='heroku pg:info'
