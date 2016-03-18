@@ -2,8 +2,15 @@
 
 alias sshTunnelIF='ssh root@139.162.155.105 -L 5433:localhost:5432'
 
+alias cda='cd ~/Projects/instaflower/admin'
+alias cdn='cd ~/Projects/instaflower/node'
+alias cdw='cd ~/Projects/instaflower/web'
+alias cdwl='cd ~/Projects/link2buy/web'
+
 alias pgStart='pg_ctl start -D ~/Projects/PostgreSQL/'
 alias pgStop='pg_ctl stop -m fast -D ~/Projects/PostgreSQL/'
+
+alias redis='redis-server /usr/local/etc/redis.conf'
 
 alias gl='git log'
 alias пд=gl
@@ -24,7 +31,9 @@ alias gp='git push'
 alias пз=gp
 
 alias gpl='git pull'
-alias пзд=gpl
+alias gplb='git pull && npm run build'
+alias пзд=gplb
+alias пзди=gplb
 
 alias gb='git branch'
 alias пи=gb
