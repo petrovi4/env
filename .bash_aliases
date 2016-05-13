@@ -1,12 +1,5 @@
 #!/bin/bash
 
-alias sshTunnelIF='ssh root@139.162.155.105 -L 5433:localhost:5432'
-
-alias cda='cd ~/Projects/instaflower/admin'
-alias cdn='cd ~/Projects/instaflower/node'
-alias cdw='cd ~/Projects/instaflower/web'
-alias cdwl='cd ~/Projects/link2buy/web'
-
 alias pgStart='pg_ctl start -D ~/Projects/PostgreSQL/'
 alias pgStop='pg_ctl stop -m fast -D ~/Projects/PostgreSQL/'
 
@@ -65,15 +58,4 @@ function gfFunc {
 }
 alias gf=gfFunc
 alias па=gf
-
-alias tw='tail -f -n 50 /var/log/mainpeople_app-work.log'
-alias te='tail -f -n 50 /var/log/mainpeople_app-error.log'
-
-alias hpm='git push heroku master:master'
-alias hpd='git push heroku dev:master'
-
-alias hlog='heroku logs --tail'
-alias hi='heroku apps:info'
-alias hpi='heroku pg:info'
-alias hl='heroku local'
 
