@@ -1,7 +1,7 @@
 #!/bin/bash
 
-alias pgStart='pg_ctl start -D ~/Projects/PostgreSQL/'
-alias pgStop='pg_ctl stop -m fast -D ~/Projects/PostgreSQL/'
+alias pgStart='pg_ctl start -D ~/Projects/postgres/'
+alias pgStop='pg_ctl stop -m fast -D ~/Projects/postgres/'
 
 alias redis='redis-server /usr/local/etc/redis.conf'
 
