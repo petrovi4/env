@@ -1,9 +1,6 @@
 #!/bin/bash
 
-alias pgStart='pg_ctl start -D ~/Projects/postgres/'
-alias pgStop='pg_ctl stop -m fast -D ~/Projects/postgres/'
-
-alias redis='redis-server /usr/local/etc/redis.conf'
+alias e=exit
 
 alias gl='git log'
 alias пд=gl
@@ -24,9 +21,7 @@ alias gp='git push'
 alias пз=gp
 
 alias gpl='git pull'
-alias gplb='git pull && npm run build'
-alias пзд=gplb
-alias пзди=gplb
+alias пзд=gpl
 
 alias gb='git branch'
 alias пи=gb
@@ -41,16 +36,19 @@ alias gchm='git checkout master'
 alias gchd='git checkout dev'
 
 alias gm='git merge -m "Auto-Merge"'
+alias gmdt='git merge dev --strategy-option theirs'
 
 alias gd='git diff'
 
-#alias gr='git checkout dev && git pull && git checkout master && git pull && git merge dev && git push && git checkout dev'
+
+
+#### FAST FIX ####
 
 function gfFunc {
 	gA
 	if [ -z $1 ]; then
 		comLine="/usr/local/bin/git commit -m 'Fast fix'"
-	else 
+	else
 		comLine="/usr/local/bin/git commit -m '$@'"
 	fi
 	eval $comLine
@@ -59,3 +57,28 @@ function gfFunc {
 alias gf=gfFunc
 alias па=gf
 
+
+
+#### RELEASE ####
+
+function startProcessFolder(){
+	printf "\--------------------- Now %s %s\n" $1 ${PWD##*/}
+}
+
+function doneProcessFolder(){
+        printf "\--------------------- Done %s\n\n" ${PWD##*/}
+}
+
+function gr() {
+	startProcessFolder "release"
+
+	git checkout dev
+	git pull
+	git checkout master
+	git pull
+	git merge dev
+	git push
+	git checkout dev
+
+	doneProcessFolder
+}

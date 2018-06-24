@@ -3,9 +3,5 @@
 
 # But not these files...
 !.gitignore
-!.bashrc
-!.bash_profile
 !.bash_aliases
-!.bash_aliases_fm
-!.bash_aliases_if
-!.bash_aliases_mp
+!.bash_profile
