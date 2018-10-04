@@ -1,20 +1,20 @@
+source ~/.bash_aliases
+
 #############################################################################
 
-export PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w \[\033[01;35m\]\$ \[\033[00m\]'
+export PS1="\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[01;33m\]\w\[\e[m\] \[\e[35;40m\]\\$\[\e[m\] "
+
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 umask 022
 
 #############################################################################
 
-eval "`dircolors`"
-
-#############################################################################
-
-alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l'
-alias l='ls $LS_OPTIONS -lA'
+alias ls='ls -GFh'
+alias ll='ls -GHh -la'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias s='ssh -l root'
 
 #############################################################################
 
@@ -24,8 +24,8 @@ export HISTFILESIZE=99999999
 export HISTSIZE=99999999
 export HISTCONTROL="ignoreboth"
 
-export LS_OPTIONS='--color=auto -h'
-
 #############################################################################
 
-source ~/.bash_aliases
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
